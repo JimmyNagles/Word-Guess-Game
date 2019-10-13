@@ -21,8 +21,10 @@ if (twoPlayers) {
     //TURNS THE string INTO AN ARRAY
     var arrayWord = lowerCaseWord.split("");
     //ask player two for a letter
-    //  
-    var hp = 0
+    //  console.log(element)'
+    var board = ["-"];
+    var hp = 0;
+    
     document.onkeyup = function (presskey) {
 
         if (hp < 11) {
@@ -32,15 +34,28 @@ if (twoPlayers) {
 
             if (arrayWord.indexOf(letters) === -1) {
 
+                webletters.innerHTML += letters + " ";
                 hp = hp + 1;
                 webLifes.innerHTML = hp + "/10";
-                webletters.innerHTML += letters + " ";
 
 
 
-            } else {
+            }
+             else {
+                 
+                 webword.innerHTML += letters;
+                
+                // for (let x = 0; x < arrayWord.length; x++) {
+                //     const element = arrayWord[x];
+                //     board[x] = "";
 
-                webword.innerHTML += letters;
+                //     webword.innerHTML += board;
+               
+                //     console.log(element)
+                    
+                // }
+
+
 
 
             }
@@ -53,7 +68,7 @@ if (twoPlayers) {
 //PC BOT VS HUMAN
 else {
 
-    var premadeWords = ["pollo", "tofu", "arroz", "rice", "beans", "tomatoes"];
+    var premadeWords = ["javascript", "google", "amazon", "uber", "bloomberg", "microsoft","ibm","samsung","apple","tesla","spacex"];
     
     var damage = 0;
     var computerGuess = premadeWords[Math.floor(Math.random() * premadeWords.length)];
@@ -92,6 +107,9 @@ else {
             //if they get it right then 
             else {
 
+                //prints guess on screen
+                webword.innerHTML += lowerLetters;
+                
                 correctGuesses.push(letters);
                 var wordToDisplay = '';
                 for (let i = 0; i < word.length; i++) {
@@ -103,7 +121,6 @@ else {
 
 
                 }
-                webword.innerHTML = wordToDisplay;
 
             }
 

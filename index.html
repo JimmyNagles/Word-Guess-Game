@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+        integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+        
+
+</head>
+
+
+<body>
+
+    <div class="jumbotron">
+        <h1 class="text-center">WELCOME TO HANGMAN !</h1>
+
+    </div>
+
+    <br>
+    <br>
+
+    <img src="data:image/png;base64,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"
+        class="rounded mx-auto d-block" alt="Responsive image">
+    <br>
+    <br>
+    <br>
+    <div class="container">
+        <div class="row">
+            <div class="col">
+                <h1 class="text-center" id="palabra"></h1>
+            </div>
+        </div>
+    </div>
+    <br>
+    <br>
+    <br>
+
+    <div class="container">
+        <div class="row">
+            <div class="col-sm">
+                <h1 class="text-center">Lifes</h1>
+                <h2 class="text-center" id="vidas"></h2>
+            </div>
+            <div class="col-sm">
+                <h1 class="text-center">Guessed</h1>
+                <h2 id="letras"> </h2>
+            </div>
+        </div>
+    </div>
+
+    <script src="assets/javascript/game.js"></script>
+    </body>
+    </html>

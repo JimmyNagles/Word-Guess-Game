@@ -22,7 +22,7 @@ if (twoPlayers) {
     var arrayWord = lowerCaseWord.split("");
     //ask player two for a letter
     //  console.log(element)'
-    var board = ["-"];
+   
     var hp = 0;
     
     document.onkeyup = function (presskey) {
@@ -109,12 +109,16 @@ else {
 
                 //prints guess on screen
                 webword.innerHTML += lowerLetters;
+                //
+                 
+                var board = "-";
+
                 
-                correctGuesses.push(letters);
-                var wordToDisplay = '';
-                for (let i = 0; i < word.length; i++) {
-                    const element = word[i];
-                    
+        
+
+
+
+            
 
 
                 
@@ -129,4 +133,3 @@ else {
         }
     }
 
-}

@@ -24,7 +24,12 @@ if (twoPlayers) {
     //  console.log(element)'
    
     var hp = 0;
-    
+    var answerArray = [];
+    for (var i = 0; i < arrayWord.length; i++) {
+    answerArray[i] = "_";
+   }
+ 
+   webword.innerHTML += answerArray;
     document.onkeyup = function (presskey) {
 
         if (hp < 11) {
@@ -43,18 +48,11 @@ if (twoPlayers) {
             }
              else {
                  
-                 webword.innerHTML += letters;
                 
-                // for (let x = 0; x < arrayWord.length; x++) {
-                //     const element = arrayWord[x];
-                //     board[x] = "";
-
-                //     webword.innerHTML += board;
-               
-                //     console.log(element)
-                    
-                // }
-
+                
+                  //displays word to guess on screen
+                
+        
 
 
 
@@ -74,11 +72,23 @@ else {
     var computerGuess = premadeWords[Math.floor(Math.random() * premadeWords.length)];
 
     var word = computerGuess.split("");
+//creates the word to display in the game
+    var answerArray = [];
+    //makes it the same leght as the word
+    for (var i = 0; i < word.length; i++) {
+    answerArray[i] = "_";
+   }
+   //displays it on the screen
+   webword.innerHTML += answerArray;
+   //
     //gets plauers name
     var playerName = prompt("whats your name?");
     //lets player now hes ready to sarts
     alert(playerName + " type the letter you would like to guess!");
     //keys start working
+
+   
+
     document.onkeyup = function (event) {
 
         // Determines which key was pressed.
@@ -107,29 +117,10 @@ else {
             //if they get it right then 
             else {
 
-                //prints guess on screen
-                webword.innerHTML += lowerLetters;
-                //
-                 
-                var board = "-";
-
                 
-        
-
-
-
-            
-
-
-                
-
-
+       
                 }
-
             }
-
-
-
         }
     }
 

@@ -49,8 +49,18 @@ if (twoPlayers) {
              else {
                  
                 
-                
-                  //displays word to guess on screen
+                   ////goes throught the whole word
+                   for (var z = 0; z < arrayWord.length; z++) {
+                   
+                   //looks where the guess is
+                    if (arrayWord[z] === letters) {
+                        answerArray[z] = letters;
+                     //displays word to guess on screen   
+                      webword.innerHTML = answerArray;
+                        }
+                       }
+            
+                  
                 
         
 
@@ -116,9 +126,13 @@ else {
 
             //if they get it right then 
             else {
-
-                
-       
+                    
+                for (var j = 0; j < word.length; j++) {
+                 if (word[j] === lowerLetters) {
+                     answerArray[j] = lowerLetters;
+                     webword.innerHTML = answerArray;
+                     }
+                    }
                 }
             }
         }

@@ -5,6 +5,8 @@ var webLifes = document.getElementById("vidas");
 //IF they click 'okay ' then -if line- of code will run
 // if they clikc "cancel" -else line- of code will run
 // Okay means theres 2 players
+
+
 // Cancel means 1 vs pc
 var twoPlayers = confirm("Click ' Okay ' for two players or ' Cancel ' for one");
 
@@ -124,15 +126,26 @@ else {
                 alert('Wrong guess! ')
             }
 
-            //if they get it right then 
+            //if they get it right 
             else {
-                    
+                    //uses this loop to see put the users guess into the word
                 for (var j = 0; j < word.length; j++) {
-                 if (word[j] === lowerLetters) {
+                
+                    if (word[j] === lowerLetters) {
                      answerArray[j] = lowerLetters;
+
+                     //displays updated word 
                      webword.innerHTML = answerArray;
                      }
+                    
+                     
                     }
+
+                    if (answerArray===word){
+
+                        alert("you've won!!")
+                     }
+
                 }
             }
         }
